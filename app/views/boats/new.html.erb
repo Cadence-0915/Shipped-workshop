@@ -1,0 +1,18 @@
+<h1>List Your Boats!</h1>
+
+<div class="inline">
+	<%= form_for @boats, :url => boats_path, :html => { :multipart => true } do |f| %>
+	<%=f.label :name %>
+	<%=f.text_field :name %>
+
+	<%=f.label :max_container %>
+	<%=f.text_field :max_container %>
+
+	<%=f.label :location %>
+	<%=f.text_field :location %>
+	<%=f.file_field :avatar %>
+	<%=f.submit "Enter" %>
+</div>
+<% end %>
+
+<button id="logout"><%= link_to "Logout", logout_path %></button>

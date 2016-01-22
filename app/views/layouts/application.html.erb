@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shipped</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <style>
+	p {
+	    text-indent: 50px;
+	}
+  </style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Sign Up", new_user_path if session[:user_id] ==nil %></li>
+				<li><%= link_to "Sign In", login_path  if session[:user_id] ==nil %></li>
+				<li><%= link_to "About", about_path %></li>
+			</ul>
+		</nav>
+	</header>
+	<hr>
+<%= yield %>
+
+</body>
+</html>

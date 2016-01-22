@@ -1,0 +1,10 @@
+<h1>Index of Boats</h1>
+
+<% @boats.each do |boat| %>
+<ul>
+	<li><p>Boat Name: <%= boat.name %></p></li>
+	<li><p>Max Container Amount: <%= boat.max_container %></p></li>
+	<li><p>Boat Location: <%= boat.location %></p></li>
+</ul>
+<% end %>
+

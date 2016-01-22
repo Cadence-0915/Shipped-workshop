@@ -1,0 +1,44 @@
+body{
+	background-image: url(pirateship.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+h1{
+	color: #000;
+	font-size: 35px;
+	margin-left: 605px;
+	text-shadow: 3px 3px #D1FCE1;
+}
+
+h2{
+	color: #000;
+	margin-left: 605px;
+	text-shadow: 3px 3px #D1FCE1;
+}
+
+a{
+	clear: both;
+	color: #000;
+	display: inline-block;
+	font-size: 18px;
+	padding-right: 248px;
+	margin: 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.inline{
+	color: #000;
+	font-size: 20px;
+	text-align: center;
+}
+
+li{
+	display: inline-block;
+	font-size: 20px;
+}
+
+p{
+	font-size: 16px;
+}

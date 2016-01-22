@@ -1,0 +1,18 @@
+<h1>Welcome, <%= @user.username %></h1>
+
+<h2>List your boats today!</h2>
+<% @boats.each do |boat| %>
+<ul>
+	<li><%= boat.name %></li>
+	<li><%= boat.max_container %></li>
+	<li><%= boat.location %></li>
+</ul>
+<% end %>
+
+<%= image_tag @user.avatar.url %>
+
+<button id="ship"><%= link_to "See our Boats", boats_path %></button>
+
+<button id="ship"><%= link_to "Add new Boats", new_boat_path %></button>
+
+<button id="logout"><%= link_to "Logout", logout_path %></button>

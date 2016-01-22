@@ -1,0 +1,12 @@
+<h1>Your Boats</h1>
+
+<ul>
+	<li><p>Boat Name: <%= @boat.name %></p></li>
+	<li><p>Max Container Amount: <%= @boat.max_container %></p></li>
+	<li><p>Boat location: <%= @boat.location %></p></li>
+</ul>
+
+<%= image_tag @boat.avatar.url %>
+
+<button id="logout"><%= link_to "Logout", logout_path %></button>
+
