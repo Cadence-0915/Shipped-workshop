@@ -7,4 +7,10 @@ class Boat < ActiveRecord::Base
 	:default_url => "/images/:style/missing.png"
 	validates_attachment_content_type :avatar,
 	:content_type => /\Aimage\/.*\Z/
+
+		validates :name, uniqueness: true
+
+		validates :location, inclusion: { in: %w(New\ York Florida Russia England Ireland Norway Singapore New\ Jersey), message: "%{value} is not a valid location"}
 end
+
+

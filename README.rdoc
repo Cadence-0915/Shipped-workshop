@@ -1,28 +1,46 @@
-== README
+Workshop requirements
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Part 1
 
-Things you may want to cover:
+-Create a Rails application for shippers to help them organize all of the ships in their fleet, with a user login. The application should be able to, at its most basic, allow users to:
 
-* Ruby version
+	1) sign up and login
+	2) add new boats to their profile, meant to be managed by 	that user, including a boat name, amount of containers able to ship, and current boat location
+	3) assign "jobs" to boats, including containers needed, 	cargo, origin, cost for job, and destination
 
-* System dependencies
+Once you have the basics setup, add some validations:
 
-* Configuration
+	-Boats must have a unique name
+	-locations must be pulled from a valid list of locations (use a hard-coded list)
 
-* Database creation
+	-Jobs must have a unique name
+	-cost must be above $1000 for each job
+	-cargo description must be at least 50 characters
+	-origin and destinations must be pulled from a valid list of locations (use a hard-coded list)
 
-* Database initialization
+Part 2 
 
-* How to run the test suite
+	1)Allow users to "follow" other ships. This means they should be able to click a "follow" button and have the "following" recorded in the database.
+	2)A new page should be added where users can see what ships they're currently following
+	3)Using Paperclip, users should have the ability to upload a photo of a ship when the ship is being created
 
-* Services (job queues, cache servers, search engines, etc.)
+**********************************************************
 
-* Deployment instructions
+My app currently allows the following:
 
-* ...
+	Users can sign in and sign up. When a user is signed in, another user cannot sign in or sign up. The sign in/sign up links in the navbar disappear when a user is signed in. Also, if a user goes to localhost:3000/login in the website url, they are redirected to their profile page. 
+
+	Users can add boats to their profile, including a boat name, max number of containers and current boat location. Users can add a profile picture. This only applies to new users created after the paperclip gem was installed. 
+
+	**Users cannot currently add jobs to their boats. I did create a job table, a jobs controller, and a job model. 
+	
+	Validations are set up, so boat names must be unique and boat locations are hard-coded.
+
+	Part 2
+
+	**Users cannot follow other ships. Users cannot see what ships they're following. 
+
+	When users click 'View your Boats', they can see the picture of their boat they chose when adding the boat.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+

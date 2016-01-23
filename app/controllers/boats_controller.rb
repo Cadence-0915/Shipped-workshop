@@ -5,13 +5,15 @@ class BoatsController < ApplicationController
 	end
 
 	def new 
-		@boats = Boat.new
+		@boat = Boat.new
 	end
 
 	def create
-		@boats = Boat.create(boat_params)
-		if @boats.save
-			redirect_to @boats
+		@boat = Boat.create(boat_params)
+		if @boat.save
+			redirect_to @boat
+		else 
+			render :new
 		end
 	end
 
