@@ -34,14 +34,14 @@ My app currently allows the following:
 
 	Boat validations are set up, so boat names must be unique and boat locations are hard-coded.
 
-	**Users cannot currently add jobs to their boats because I'm not entirely sure how to add this functionality.  I have created a job table, a jobs controller, and a job model. I also set job validations so jobs must have a unique name, cost must be above $1000 for each job, the cargo description must be at least 50 characters, the
+	**Users cannot currently add jobs to their boats. It gives an error of template missing whenever I try adding jobs. I have created a job table, a jobs controller, and a job model. I also set job validations so jobs must have a unique name, cost must be above $1000 for each job, the cargo description must be at least 50 characters, the
 	origin and destinations must be pulled from a valid list of locations.
 	
 	Part 2
 
 	**Users cannot follow other ships. Users cannot see what ships they're following. 
 
-	When users click 'View your Boats', they can see the picture of their boat they chose when they first added the boat.
+	Users can add boats and choose a picture for their boat. -Users cannot see their boats until they have actually added a boat.
 
 
 
