@@ -24,4 +24,8 @@ class SessionsController < ApplicationController
 		session[:user_id] = nil
 		redirect_to login_path
 	end
+
+	def current_user
+		@current_user = session[:user_id]
+	end	
 end
