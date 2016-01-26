@@ -43,5 +43,7 @@ My app currently allows the following:
 
 	Users can add boats and choose a picture for their boat. -Users cannot see their boats until they have actually added a boat.
 
+	***Boats were not being associated with users. TA Mike showed me a new method in my boats_controller, merge to associate users with their boats. I also dropped my old users table and made a new one. 
+
 
 
